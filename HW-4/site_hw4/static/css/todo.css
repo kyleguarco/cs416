@@ -1,0 +1,44 @@
+.no-border {
+    border: 0;
+    box-shadow: none !important;
+}
+
+.task-body {
+    border-color: silver;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    border-style: solid;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+.task-body:hover {
+    background-color: #fafafa;
+}
+
+.task-emphasize {
+    color: #fe6993;
+    background-color: #fe69931a;
+    border-radius: 3px;
+    padding: 0.2em;
+    line-height: 2em;
+    font-style: normal;
+}
+
+.task-completed {
+    background-color: #eeeeee;
+}
+
+.task-completed .task-description {
+    text-decoration: line-through;
+}
+
+.created-at {
+    font-size: 1rem;
+    color: gray;
+}
+
+body {
+    background-color: #fafafa;
+}

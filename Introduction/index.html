@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello, World!</title>
+    <script>
+        function use() {
+            var txt = document.getElementsByName("text").item(0);
+            txt.firstChild.data = "Pressed!";
+        }
+    </script>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+    <h1>Lovin' this HTML guys...</h1>
+
+    <img width="200px;"
+        src="resources/images/zoe.jpeg"
+        alt="Zoe!"/>
+
+    <p id="text"><b>Click that button to change this text!</b></p>
+    <input type="button"
+        value="Change"
+        onclick="use()"/>
+</body>
+
+</html>

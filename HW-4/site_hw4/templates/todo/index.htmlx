@@ -1,0 +1,31 @@
+<!-- This page displays all the TODO tasks. -->
+{% extends 'base.htmlx' %}
+
+{% block head %}
+<title>Add TO-DO</title>
+{% endblock %}
+
+{% block body %}
+<form class="row justify-content-center text-center" method="post">
+    {% csrf_token %}
+    <div class="input-group">
+        <input type="text" class="form-control" name="task" placeholder="Enter a task">
+        <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+</form>
+{% for task in tasks %}
+<div class="row m-3 task-body {% if task.completed %} task-completed {% endif %}">
+    <div class="col-lg-6 task-description">
+        <h3><strong>{{ task.task }}</strong></h3>
+        <p class="created-at">Created at: {{ task.created }}</p>
+    </div>
+    <div class="col-md-6 text-md-end">
+        {% if not task.completed %}
+            <a href="{% url 'todo_complete' task.id %}" class="btn btn-success">Complete</a>
+        {% endif %}
+        <a href="{% url 'todo_update' task.id %}" class="btn btn-primary">Update</a>
+        <a href="{% url 'todo_delete_view' task.id %}" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

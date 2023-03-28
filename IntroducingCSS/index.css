@@ -1,0 +1,24 @@
+/* ID styles override Class and Tag styles!
+ * This is a class specifier for styles:
+ *  .class {
+ *      border: solid 3px red;
+ *  };
+ *
+ * This is an ID specifier for styles
+ * (note the pound sign):
+ *     #id {
+ *         color: red;
+ *     };
+*/
+
+body {
+    background-color: tomato;
+};
+
+h1 {
+    color: red;
+};
+
+.my-red-start {
+    border: solid 3px blue;
+};

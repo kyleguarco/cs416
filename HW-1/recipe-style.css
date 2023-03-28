@@ -1,0 +1,74 @@
+html {
+    background-color: #f4f4f4;
+    margin: 3% 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    background-color: #44bca1;
+    color: white;
+    text-align: center;
+    padding: 5% 5%;
+    border: solid 3px gray;
+}
+
+h2 {
+    color: gray;
+}
+
+img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    border: solid 1px silver;
+    border-radius: 15px;
+}
+
+body p {
+    font-size: 1.2em;
+    color: #333333;
+}
+
+body p.tip {
+    color: gray;
+}
+
+body p.tip {
+    color: gray;
+}
+
+body p.emphasized {
+    text-decoration: underline;
+}
+
+body div {
+    background-color: white;
+    margin: 25px 0 0 0;
+    padding: 10px;
+}
+
+a {
+    color: #42b4e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.user-comments h2 {
+    font-size: 2em;
+    margin: 2% 0;
+    color: black;
+}
+
+.user-comments div {
+    margin: 0;
+    border-bottom: solid 3px black;
+}
+
+.user-comments div p {
+    font-size: 0.9em;
+    color: gray;
+}

@@ -1,0 +1,16 @@
+<!-- The base page for update and delete tasks -->
+{% extends 'base.htmlx' %}
+
+{% block body %}
+<!-- https://getbootstrap.com/docs/5.1/components/card/#header-and-footer -->
+<div class="card">
+    <div class="card-header">
+    {% block card-header %}
+    {% endblock %}
+    </div>
+    <div class="card-body">
+    {% block card-body %}
+    {% endblock %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!-- This page allows updates to TODOs. -->
+{% extends 'base-card.htmlx' %}
+
+{% block head %}
+<title>Update TO-DO</title>
+{% endblock %}
+
+{% block card-header %}
+Update Task
+{% endblock %}
+
+{% block card-body %}
+<form class="form" method="post">
+    {% csrf_token %}
+    <div class="row align-items-center my-2">
+        <div class="col-lg-10">
+            {{ form.task.label_tag }}
+            {{ form.task }}
+        </div>
+        <div class="col-lg-2">
+            {{ form.completed.label_tag }}
+            <div class="form-check form-switch mx-3">
+            {{ form.completed }}
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'todo_index' %}" class="btn btn-info text-light">No, go back</a>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}

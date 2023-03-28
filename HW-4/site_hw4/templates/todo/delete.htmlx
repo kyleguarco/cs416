@@ -1,0 +1,16 @@
+<!-- This page displays a deletion prompt for TODOs. -->
+{% extends 'base-card.htmlx' %}
+
+{% block head %}
+<title>Delete TO-DO</title>
+{% endblock %}
+
+{% block card-header %}
+Delete Task
+{% endblock %}
+
+{% block card-body %}
+<h2>Are you sure you want to delete <span class="task-emphasize">{{ task.task }}</span>?</h2>
+<a href="{% url 'todo_index' %}" class="btn btn-primary">No, go back</a>
+<a href="{% url 'todo_delete' task.id %}" class="btn btn-danger">Yes, delete</a>
+{% endblock %}
